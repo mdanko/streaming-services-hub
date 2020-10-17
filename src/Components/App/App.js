@@ -4,9 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Sidebar from '../Sidebar/Sidebar';
 import Appbar from '../Appbar/Appbar';
-
-
-const DRAWER_WIDTH = { EXPANDED: 200, COLLAPSED: 50 };
+import ContentContainer from '../ContentContainer/ContentContainer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,23 +19,8 @@ const useStyles = makeStyles((theme) => ({
   container: {
     height: "100%"
   },
-  content: {
-    height: "100%",
-    marginLeft: DRAWER_WIDTH.EXPANDED,
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    })
-
-  },
-  contentExpanded: {
-    height: "100%",
-    marginLeft: DRAWER_WIDTH.COLLAPSED,
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-
-    })
+  contentGrid: {
+    overflowY: "scroll"
   },
   friends: {
     height: "100%"
@@ -57,14 +40,19 @@ const App = () => {
   return (
     <div className={classes.root}>
       <Appbar onMenuClick={() => { toggleDrawer(!state.drawerCollapsed) }} />
-
       <Sidebar collapsed={state.drawerCollapsed} />
 
       <main className={classes.main}>
+        {/* main container */}
         <Grid container className={classes.container}>
-          <Grid item xs={10}>
-            <Paper square className={state.drawerCollapsed ? classes.contentExpanded : classes.content}>Content</Paper></Grid>
-          <Grid item xs={2}><Paper square className={classes.friends}>Friends</Paper></Grid>
+          <Grid item xs={10} className={classes.contentGrid} >
+            <ContentContainer expanded={state.drawerCollapsed} />
+          </Grid>
+
+          <Grid item xs={2}>
+            {/* friends container */}
+            <Paper square className={classes.friends}>Friends</Paper>
+          </Grid>
         </Grid >
       </main>
 
