@@ -4,19 +4,17 @@ import TileList from '../TileList/TileList';
 
 const topics = [{
   title: "Watchlist",
-  items: ["Movie1", "Movie2", "Movie3", "Movie4", "Movie5"]
+  items: ["Movie1", "Movie2", "Movie3", "Movie4", "Movie5", "Movie6", "Movie7", "Movie8", "Movie9", "Movie10",
+    "Movie11", "Movie12", "Movie13", "Movie14", "Movie15"]
 }, {
   title: "Currently Watching",
-  items: ["Movie1", "Movie2", "Movie3", "Movie4", "Movie5"]
+  items: ["Movie1", "Movie2", "Movie3"]
 }, {
   title: "Suggested By Friends",
-  items: ["Movie1", "Movie2", "Movie3", "Movie4", "Movie5"]
+  items: ["Movie1", "Movie2", "Movie3", "Movie4", "Movie5", "Movie6", "Movie7", "Movie8"]
 }, {
-  title: "",
-  items: ["Movie1", "Movie2", "Movie3", "Movie4", "Movie5"]
-}, {
-  title: "",
-  items: ["Movie1", "Movie2", "Movie3", "Movie4", "Movie5"]
+  title: "Recently Finished",
+  items: ["Movie1", "Movie2", "Movie3", "Movie4", "Movie5", "Movie6", "Movie7", "Movie8", "Movie9", "Movie10"]
 }];
 
 const useStyles = makeStyles((theme) => ({}));

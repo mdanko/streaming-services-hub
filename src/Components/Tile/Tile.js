@@ -4,9 +4,10 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
   fillHeight: {
+    position: "relative",
     display: "inline-block",
-    height: "80%",
-    width: "200px",
+    height: "100%",
+    width: "18%",
     marginLeft: "5px",
     "&:hover": {
       transform: "scale(1.5)",

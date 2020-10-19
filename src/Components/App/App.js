@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 const App = () => {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    drawerCollapsed: false
+    drawerCollapsed: true
   });
 
   const toggleDrawer = (open) => {

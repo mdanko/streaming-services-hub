@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexShrink: 0,
   },
   drawerPaper: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.primary.main,
     width: DRAWER_WIDTH.EXPANDED,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.easeOut,
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden'
   },
   drawerPaperCollapsed: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.primary.main,
     width: DRAWER_WIDTH.COLLAPSED,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
